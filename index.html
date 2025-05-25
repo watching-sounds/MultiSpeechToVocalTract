@@ -14,7 +14,7 @@
             color: #333;
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: auto;
             padding: 20px;
             background: #fff;
@@ -28,33 +28,27 @@
         .video-container {
             margin-top: 20px;
         }
-        .video-wrapper {
+        .video-pair {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .video-box {
+            width: 45%;
             display: flex;
             flex-direction: column;
-            gap: 10px;
             align-items: center;
         }
-        .video-wrapper video {
-            width: 50%; /* Adjust video size */
-            height: auto;
+        .video-box video {
+            width: 100%;
             border: 1px solid #ddd;
             border-radius: 4px;
-            margin: 0 auto;
         }
         .transcription {
-            text-align: center;
-            margin-top: 2px;
-            width: 80%;
-            margin: 0 auto; /* Center the transcription */
-            color: #333; /* Text color consistent with body */
-            font-size: 14px; /* Slightly smaller font size for the transcription */
-        }
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+            margin-top: 5px;
+            font-size: 14px;
+            color: #333;
         }
     </style>
 </head>
@@ -62,78 +56,76 @@
 
 <div class="container">
     <h1>Multilingual Speech-to-Vocal Tract Visualization</h1>
-    
     <p>Through this application, it is possible to visualize your own vocal tract through speech and correct your pronunciation. Check some examples below!</p>
 
     <div class="video-container">
         <h2>Demonstration Videos</h2>
-        <div class="video-wrapper">
-            <video controls>
-                <source src="apaupuipi.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="transcription">
-                <p>Example 1.</p>
-            </div>
-            
-            <video controls>
-                <source src="akaukuiki.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="transcription">
-                <p>Example 2.</p>
-            </div>
-            
-            <video controls>
-                <source src="english_1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="transcription">
-                <p>Example 3.</p>
-            </div>
-            
-            <video controls>
-                <source src="english_2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="transcription">
-                <p>Example 4.</p>
-            </div>
 
-            <video controls>
-                <source src="korean_1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="transcription">
-                <p>Example 4.</p>
+        <!-- Pair 1 -->
+        <div class="video-pair">
+            <div class="video-box">
+                <video controls>
+                    <source src="apaupuipi.mp4" type="video/mp4">
+                </video>
+                <div class="transcription">Example 1</div>
             </div>
-
-            <video controls>
-                <source src="korean_2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="transcription">
-                <p>Example 4.</p>
-            </div>
-
-
-            <video controls>
-                <source src="portugues_1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="transcription">
-                <p>Example 4.</p>
-            </div>
-                      <video controls>
-                <source src="portuguese_2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="transcription">
-                <p>Example 4.</p>
+            <div class="video-box">
+                <video controls>
+                    <source src="akaukuiki.mp4" type="video/mp4">
+                </video>
+                <div class="transcription">Example 2</div>
             </div>
         </div>
-    </div>
 
+        <!-- Pair 2 -->
+        <div class="video-pair">
+            <div class="video-box">
+                <video controls>
+                    <source src="english_1.mp4" type="video/mp4">
+                </video>
+                <div class="transcription">Example 3</div>
+            </div>
+            <div class="video-box">
+                <video controls>
+                    <source src="english_2.mp4" type="video/mp4">
+                </video>
+                <div class="transcription">Example 4</div>
+            </div>
+        </div>
+
+        <!-- Pair 3 -->
+        <div class="video-pair">
+            <div class="video-box">
+                <video controls>
+                    <source src="korean_1.mp4" type="video/mp4">
+                </video>
+                <div class="transcription">Example 5</div>
+            </div>
+            <div class="video-box">
+                <video controls>
+                    <source src="korean_2.mp4" type="video/mp4">
+                </video>
+                <div class="transcription">Example 6</div>
+            </div>
+        </div>
+
+        <!-- Pair 4 -->
+        <div class="video-pair">
+            <div class="video-box">
+                <video controls>
+                    <source src="portugues_1.mp4" type="video/mp4">
+                </video>
+                <div class="transcription">Example 7</div>
+            </div>
+            <div class="video-box">
+                <video controls>
+                    <source src="portuguese_2.mp4" type="video/mp4">
+                </video>
+                <div class="transcription">Example 8</div>
+            </div>
+        </div>
+
+    </div>
 </div>
 
 </body>
